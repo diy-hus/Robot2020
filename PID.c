@@ -1,13 +1,11 @@
  /////////////////////// TINH VI TRI XE/////////////////////////////////////
 int vitrixe()
- {   
-
-
+{
     char j;
     unsigned int sum1=0, sum2=0;
     float temp;  
     read_adc_all();
-    for (j=1; j<7;j++)
+    /*for (j=1; j<7;j++)
     {
         sum1=sum1+adc[j]*(j+1);
         sum2=sum2+adc[j];
@@ -19,8 +17,19 @@ int vitrixe()
     }
     else 
         temp=0;
-    return temp-45;
- }            
+    return temp-45;*/
+    int finalPosition;
+    //kiem tra adc tu 2 den 7
+    for (int i=6; i>0; i--)
+    {
+        if (outStatus - pow(2, i) > 0) 
+        {
+            finalPosition = i;
+        }
+    }
+
+    return finalPosition;
+}
 
 //---------------------------------------------------
 int PID_control()
@@ -29,7 +38,7 @@ int PID_control()
     int error_sum=0,Max = 42;
     
     error =(float)vitrixe();            // Sai so dieu khien
-   
+    //vi tri xe chay tu 1 - 6 nen can thay doi pid tuong ung
     
     if ((error<-35) && (old_error>=0)) {error=-error;}  
     

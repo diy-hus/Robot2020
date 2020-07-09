@@ -2,7 +2,7 @@
 This program was produced by the
 CodeWizardAVR V2.05.0 Professional
 Automatic Program Generator
-© Copyright 1998-2010 Pavel Haiduc, HP InfoTech s.r.l.
+ï¿½ Copyright 1998-2010 Pavel Haiduc, HP InfoTech s.r.l.
 http://www.hpinfotech.com
 
 Project : 
@@ -27,8 +27,8 @@ Data Stack size         : 1024
 #include <delay.h>
 
 #include <alcd.h>
+#include <math.h>
 
-#define chanel 8
 #include "khai_bao.c"
 #include "dinh_nghia.c"
 #include "khoi_tao.c"
