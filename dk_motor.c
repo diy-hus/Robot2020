@@ -18,7 +18,7 @@ void control_motor_(unsigned char motor,unsigned char dir_motor, unsigned char s
             PORTB.2 = dir_motor;  
             //if(speed>100)   speed = 100;
             
-          OCR1A=speed-Udk_1*(Udk_1/2); 
+            OCR1A=speed-Udk_1*(Udk_1/2); 
             break;
         } 
         case 1:
@@ -33,18 +33,33 @@ void control_motor_(unsigned char motor,unsigned char dir_motor, unsigned char s
         {         
             PORTE.1 = dir_motor; 
             //if(speed>100)   speed = 100;
-            if(dir_motor == 1)  {OCR3AH = (int)(speed+Udk_1*(-Udk_1/2.1))/256;OCR3AL = (int)(speed+Udk_1*(-Udk_1/2.1))%256;}  
-            else {OCR3AH = 1023-(int)(speed+Udk_1*(-Udk_1/2.1))/256;OCR3AL = 1023-(int)(speed+Udk_1*(-Udk_1/2.1))%256;} ; 
+            if(dir_motor == 1)  
+            {
+                OCR3AH = (int)(speed+Udk_1*(-Udk_1/2.1))/256;
+                OCR3AL = (int)(speed+Udk_1*(-Udk_1/2.1))%256;
+            }  
+            else 
+            {
+                OCR3AH = 1023-(int)(speed+Udk_1*(-Udk_1/2.1))/256;
+                OCR3AL = 1023-(int)(speed+Udk_1*(-Udk_1/2.1))%256;
+            } 
             break;
         }
         case 3:
         {         
             PORTE.2 = dir_motor;   
             //if(speed>100)   speed = 100;
-            if(dir_motor == 1)  {OCR3BH = (int)(speed-Udk_1*(-Udk_1/2.1))/256;OCR3BL = (int)(speed-Udk_1*(-Udk_1/2.1))%256;}  
-            else {OCR3BH = 1023-(int)(speed-Udk_1*(-Udk_1/2.1))/256;OCR3BL = 1023-(int)(speed-Udk_1*(-Udk_1/2.1))%256;} ; 
+            if(dir_motor == 1)  
+            {
+                OCR3BH = (int)(speed-Udk_1*(-Udk_1/2.1))/256;
+                OCR3BL = (int)(speed-Udk_1*(-Udk_1/2.1))%256;
+            }  
+            else 
+            {
+                OCR3BH = 1023-(int)(speed-Udk_1*(-Udk_1/2.1))/256;
+                OCR3BL = 1023-(int)(speed-Udk_1*(-Udk_1/2.1))%256;
+            } 
             break;
         }
-        
     }
 }
