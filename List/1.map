@@ -1,0 +1,65 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+adc                                                                               0x0500      16
+status                                                                            0x0510       8
+error                                                                             0x0518       4
+old_error                                                                         0x051C       4
+Kp                                                                                0x0520       4
+Kd                                                                                0x0524       4
+Ki                                                                                0x0528       4
+speed                                                                             0x052C       2
+RC                                                                                0x052E       1
+RC1                                                                               0x052F       1
+RC2                                                                               0x0530       1
+RC3                                                                               0x0531       1
+RC4                                                                               0x0532       1
+RC5                                                                               0x0533       1
+v                                                                                 0x0534       1
+max_adc                                                                           0x0535      16
+min_adc                                                                           0x0545      16
+i                                                                                 0x0555       1
+_base_y                                                                           0x0556       4
+_lcd_x                                                                            0x055A       1
+_lcd_y                                                                            0x055B       1
+_lcd_maxx                                                                         0x055C       1
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+level                                                                             0x0000      16
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+outStatus                                                                         R5           1
+Udk_1                                                                             R6,R7        2
+dem                                                                               R8,R9        2
+max_e                                                                             R10,R11      2
+Mid                                                                               R12,R13      2
+tt                                                                                R4           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+read_adc                                                                          0x000D4     20
+timer0_comp_isr                                                                   0x000E8     73
+read_adc_all                                                                      0x00131     48
+setnguong                                                                         0x00161    332
+vitrixe                                                                           0x002AD     86
+PID_control                                                                       0x00303    181
+banhlai                                                                           0x003B8     71
+main                                                                              0x003FF    188
+put_buff_G100                                                                     0x004BB     64
+_print_G100                                                                       0x004FB    308
+sprintf                                                                           0x0062F     52
+_lcd_write_nibble_G101                                                            0x00663     37
+_lcd_write_data                                                                   0x00688     12
+lcd_gotoxy                                                                        0x00694     17
+lcd_clear                                                                         0x006A5     14
+lcd_putchar                                                                       0x006B3     32
+lcd_puts                                                                          0x006D3     15
+lcd_putsf                                                                         0x006E2     19
+lcd_init                                                                          0x006F5     46
+strlen                                                                            0x00723     12
+strlenf                                                                           0x0072F     13

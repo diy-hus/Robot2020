@@ -1,0 +1,40 @@
+RAM Allocation
+Variable                                                          Address   Size
+--------------------------------------------------------------------------------
+adc                                                               0x0500      16
+status                                                            0x0510       8
+error                                                             0x0518       4
+old_error                                                         0x051C       4
+Kp                                                                0x0520       4
+Kd                                                                0x0524       4
+Ki                                                                0x0528       4
+speed                                                             0x052C       2
+RC                                                                0x052E       1
+RC1                                                               0x052F       1
+RC2                                                               0x0530       1
+RC3                                                               0x0531       1
+RC4                                                               0x0532       1
+RC5                                                               0x0533       1
+v                                                                 0x0534       1
+max_adc                                                           0x0535      16
+min_adc                                                           0x0545      16
+i                                                                 0x0555       1
+_base_y                                                           0x0556       4
+_lcd_x                                                            0x055A       1
+_lcd_y                                                            0x055B       1
+_lcd_maxx                                                         0x055C       1
+
+EEPROM Allocation
+Variable                                                          Address   Size
+--------------------------------------------------------------------------------
+level                                                             0x0000      16
+
+Register Allocation
+Variable                                                          Register  Size
+--------------------------------------------------------------------------------
+outStatus                                                         R5           1
+Udk_1                                                             R6,R7        2
+dem                                                               R8,R9        2
+max_e                                                             R10,R11      2
+Mid                                                               R12,R13      2
+tt                                                                R4           1

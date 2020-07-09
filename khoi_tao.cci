@@ -1,0 +1,4 @@
+VERSION:3 SOURCE_TIMESTAMP:464C6870
+NODE:M LEVEL:0 LINE:1 "ADC_VREF_TYPE"
+NODE:F LEVEL:0 LINE:4 "read_adc(unsigned char adc_input)"
+NODE:F LEVEL:0 LINE:17 "timer0_comp_isr(void)"
